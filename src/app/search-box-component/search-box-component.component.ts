@@ -20,7 +20,7 @@ export class SearchBoxComponentComponent implements OnInit {
   constructor(private service:YoutubeSearchServiceService, private e1:ElementRef) { }
 
   ngOnInit(): void {
-    formEvent(this.e1.nativeElement,'keyup')
+    Observable.formEvent(this.e1.nativeElement,'keyup')
     .map((e:any)=>e.target.value)
     .filter((text:string)=>text.length>1)
     .debounceTime(250)
