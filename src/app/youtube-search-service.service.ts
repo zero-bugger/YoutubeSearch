@@ -7,8 +7,8 @@ import { SearchResultClass } from './search-result-class';
 
 @Injectable()
 export class YoutubeSearchServiceService {
-private api_key="";
-private api_url="";
+private api_key=""; //Your api key
+private api_url=""; //Your api url
   constructor(private http: HttpClient) { }
 
     search(query:string):Observable<SearchResultClass[]>{
